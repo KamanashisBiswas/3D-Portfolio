@@ -1,0 +1,98 @@
+@import "tailwindcss";
+
+/* ── Minimal Claude-Inspired Design System Tokens ── */
+:root {
+  --bg-base: #0a0a0b;
+  --bg-surface: #111114;
+  --bg-raised: #18181c;
+
+  --border-subtle: rgba(255, 255, 255, 0.06);
+  --border-default: rgba(255, 255, 255, 0.10);
+  --border-strong: rgba(255, 255, 255, 0.18);
+
+  --text-primary: #f4f4f5;
+  --text-secondary: #a1a1aa;
+  --text-muted: #52525b;
+
+  --accent-primary: #22d3ee;
+  --accent-hover: #67e8f9;
+  --accent-glow: rgba(34, 211, 238, 0.12);
+
+  --status-success: #4ade80;
+  --status-warning: #fb923c;
+  --status-info: #818cf8;
+}
+
+@keyframes loadingSlide {
+  0% { transform: translateX(-100%); }
+  50% { transform: translateX(100%); }
+  100% { transform: translateX(250%); }
+}
+
+.animate-loading-slide {
+  animation: loadingSlide 1.8s ease-in-out infinite;
+}
+
+/* ── Sci-Fi Airlock Gate Styles (from user design) ── */
+.viewport-scene {
+  perspective: 1200px;
+  perspective-origin: 50% 52%;
+}
+
+.spotlight-cone {
+  background: radial-gradient(ellipse 55% 55% at 50% 0%, rgba(200, 240, 255, 0.85) 0%, rgba(130, 210, 255, 0.45) 28%, rgba(3, 7, 18, 0) 75%);
+  clip-path: polygon(36% 0%, 64% 0%, 98% 100%, 2% 100%);
+  filter: blur(12px);
+  pointer-events: none;
+}
+
+.glow-cyan-frame {
+  box-shadow: 0 0 15px rgba(0, 242, 254, 0.85),
+              0 0 35px rgba(0, 242, 254, 0.5),
+              inset 0 0 12px rgba(0, 242, 254, 0.65);
+}
+
+.glow-cyan-seam {
+  box-shadow: 0 0 12px #00f2fe, 0 0 25px rgba(0, 242, 254, 0.8);
+}
+
+.floor-reflection {
+  background: radial-gradient(ellipse 70% 30% at 50% 0%, rgba(0, 242, 254, 0.45) 0%, rgba(0, 242, 254, 0.15) 35%, rgba(2, 6, 23, 0) 70%);
+  filter: blur(14px);
+}
+
+.metal-panel {
+  background: linear-gradient(180deg, #18202d 0%, #101622 45%, #0b0f19 100%);
+  box-shadow: inset 1px 1px 0px rgba(255, 255, 255, 0.12),
+              inset -1px -1px 0px rgba(0, 0, 0, 0.85);
+}
+
+.metal-subpanel {
+  background: linear-gradient(145deg, #131924, #0c1017);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.hazard-stripes {
+  background: repeating-linear-gradient(
+    -45deg,
+    #facc15,
+    #facc15 10px,
+    #111827 10px,
+    #111827 20px
+  );
+}
+
+.grid-ground {
+  background-size: 50px 50px;
+  background-image: 
+    linear-gradient(to right, rgba(0, 242, 254, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 242, 254, 0.04) 1px, transparent 1px);
+}
+
+.star-dots {
+  background-image: radial-gradient(1px 1px at 20px 30px, #ffffff, rgba(0,0,0,0)),
+                    radial-gradient(1.5px 1.5px at 150px 80px, #7dd3fc, rgba(0,0,0,0)),
+                    radial-gradient(1px 1px at 320px 210px, #e0f2fe, rgba(0,0,0,0)),
+                    radial-gradient(1.5px 1.5px at 450px 60px, #ffffff, rgba(0,0,0,0));
+  background-size: 500px 350px;
+}
